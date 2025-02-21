@@ -1,0 +1,7 @@
+If i want git hub to update my changes (html) ...
+1. git add .
+2. git commit -m "text refeclting change"
+3. git push
+
+Font Awsome
+-you can get a free acount for icons
