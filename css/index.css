@@ -1,0 +1,27 @@
+*{
+    box-sizing: border-box;
+}
+
+
+body {
+    background-image: linear-gradient(to right, red,orange,yellow,green,blue,indigo,violet);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.text {
+    position: relative;
+    height: 50px;
+    font-size: 20px;
+    padding: 5px;
+    width: 200px;
+    background: white;
+    border: 0;
+}
+
+.link {
+    background: white;
+}
