@@ -13,7 +13,7 @@ body {
 }
 
 .text {
-    position: relative;
+    position: absolute;
     height: 50px;
     font-size: 20px;
     padding: 5px;
@@ -22,6 +22,8 @@ body {
     border: 0;
 }
 
-.link {
+.links {
+    position: relative;
     background: white;
+    top: 80px;
 }
