@@ -10,6 +10,8 @@ body {
     margin: 0;
 }
 
+
+
 .bg {
     background: url('../images/Rat.avif');
     background-size: cover;
@@ -25,4 +27,15 @@ body {
 .loading-text {
     font-size: 50px;
     color: lightBlue;
+}
+
+.cheese {
+    width: 500px;
+    height: 500px;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    display: flex;
+    background-repeat: no-repeat;
+    opacity: 1;
 }

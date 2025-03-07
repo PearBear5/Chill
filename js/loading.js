@@ -1,5 +1,6 @@
 const loadText = document.querySelector('.loading-text')
 const bg = document.querySelector('.bg')
+const gif = document.querySelector('gif')
 
 let load = 0
 
@@ -9,6 +10,7 @@ function blurring() {
     load = load + 1
     if (load > 99){
         clearInterval(int)
+        gif.style.opacity = `1`
     }
     loadText.innerText = `${load}%`
     bg.style.filter = `blur(${50 - (load / 2)}px)`
