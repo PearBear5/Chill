@@ -1,6 +1,6 @@
 const loadText = document.querySelector('.loading-text')
 const bg = document.querySelector('.bg')
-const gif = document.querySelector('gif')
+const gif = document.querySelector('.gif')
 
 let load = 0
 

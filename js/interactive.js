@@ -1,1 +1,1 @@
-const duck =
+const duck = document.querySelector('.duck')
