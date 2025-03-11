@@ -1,5 +1,5 @@
 const duck = document.querySelector('.duck')
-const count = document.querySelector('count')
+const count = document.querySelector('.count')
 
 let amount = 0
 
