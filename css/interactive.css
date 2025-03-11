@@ -10,6 +10,21 @@ body {
     margin: 0;
 }
 
+#shop {
+    right: 5px;
+    top: 30px;
+}
+
+.bread {
+    display:flex;
+    position: absolute;
+    background: url('../images/bread.png');
+    background-repeat: no-repeat;
+    width: 200px;
+    height: 100px;
+
+}
+
 .count{
     position: absolute;
     top: 5px;
