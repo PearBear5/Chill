@@ -68,3 +68,6 @@ h1 {
     object-fit: contain;
 }
 
+.choose-insect-btn:active {
+    background-color: grey;
+}
