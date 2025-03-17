@@ -10,7 +10,7 @@ duck.addEventListener('click', ()=>{
     count.innerText = `Ducks:${amount}`
 })
 
-duck.addEventListener('click', ()=>{
+bread.addEventListener('click', ()=>{
     if (amount > 9)
     {
         amount = amount - 10
