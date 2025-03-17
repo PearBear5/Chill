@@ -52,10 +52,18 @@ h1 {
 }
 
 .choose-insect-btn {
-    background-color: transparent;
+    background-color: white;
     border: 2px solid black;
     color: black;
     cursor: pointer;
     font-family: inherit;
-    
+    width: 150px;
+    height: 150px;
+
+}
+
+.choose-insect-btn img {
+    width: 100px;
+    height: 100px;
+    object-fit: contain;
 }
