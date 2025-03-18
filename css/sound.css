@@ -1,0 +1,18 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background-color: thistle;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+}
+
+.btn {
+    background-color: white;
+    font-size: 1.2rem;
+    padding: 1.5rem 3rem;
+}
