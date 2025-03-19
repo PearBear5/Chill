@@ -16,14 +16,15 @@ bread.addEventListener('click', ()=>{
         amount = amount - 10
         bram = bram + 1
         bread.innerText = `Costs 10 Ducks: ${bram}`
+        count
     }
 })
 
 let int = setInterval(add, 3000)
 
 function add() {
-    ammount = ammount + bram
-    count.innerText = `Ducks:${ammount}`
+    amount = amount + bram
+    count.innerText = `Ducks:${amount}`
 }
 
 
