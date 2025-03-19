@@ -31,6 +31,6 @@ function startGame() {
 
 
 function increaseTime() {
-    timeEl.innerHtml = `Time: ${seconds}`
+    timeEl.innerHTML = `Time- ${seconds}`
     seconds = seconds + 1
 }
