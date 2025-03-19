@@ -119,3 +119,7 @@ h1 {
 .insect.caught {
     transform: scale(0);
 }
+
+.screen.up {
+    margin: -100%;
+}
