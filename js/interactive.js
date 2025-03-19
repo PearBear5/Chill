@@ -16,7 +16,7 @@ bread.addEventListener('click', ()=>{
         amount = amount - 10
         bram = bram + 1
         bread.innerText = `Costs 10 Ducks: ${bram}`
-        count
+        count.innerText = `Ducks:${amount}`
     }
 })
 
