@@ -33,6 +33,12 @@ function startGame() {
 function increaseTime() {
     let s = seconds % 60
     let m = Math.floor(seconds / 60)
+    if (s < 10){
+        s = `0${s}`
+    }
+    if (m < 10){
+        m = `0${m}`
+    }
     timeEl.innerHTML = `Time- ${m}:${s}`
     seconds = seconds + 1
 }
