@@ -42,3 +42,10 @@ function increaseTime() {
     timeEl.innerHTML = `Time- ${m}:${s}`
     seconds = seconds + 1
 }
+
+
+function createInsect(){
+    const insect = document.createElement('div')
+    insect.classList.add('insect')
+    insect.innerHTML = `<img src="${selected_insect.src}">`
+}
