@@ -105,3 +105,13 @@ h1 {
 .message.visable {
     opacity: 1;
 }
+
+.insect {
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100px;
+    height: 100px;
+    position: absolute;
+}
