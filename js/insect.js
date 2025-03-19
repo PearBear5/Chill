@@ -22,6 +22,7 @@ choose_insects.forEach(btn => {
         const alt = img.getAttribute('alt')
         selected_insect = {src, alt}
         startGame()
+        createInsect()
     })
 })
 
@@ -42,7 +43,6 @@ function increaseTime() {
     timeEl.innerHTML = `Time- ${m}:${s}`
     seconds = seconds + 1
 }
-
 
 function createInsect(){
     const insect = document.createElement('div')
