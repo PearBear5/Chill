@@ -19,7 +19,7 @@ bread.addEventListener('click', ()=>{
     }
 })
 
-let int = setInterval(add, 3)
+let int = setInterval(add, 3000)
 
 function add() {
     amount = amount + bram
