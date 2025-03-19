@@ -22,7 +22,8 @@ bread.addEventListener('click', ()=>{
 let int = setInterval(add, 3000)
 
 function add() {
-    amount = amount + bram
+    ammount = ammount + bram
+    count.innerText = `Ducks:${ammount}`
 }
 
 
