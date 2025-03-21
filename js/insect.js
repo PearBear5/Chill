@@ -48,6 +48,7 @@ function createInsect(){
     const insect = document.createElement('div')
     insect.classList.add('insect')
     insect.innerHTML = `<img src="${selected_insect.src}" alt = "${selected_insect.alt}">`
+    const {x, y} = getRandomLocation()
 
     game_container.appendChild(insect)
 }
@@ -56,4 +57,15 @@ function getRandomLocation(){
     const width = window.innerWidth
     const height = window.innerHeight
     const x = Math.random()*
+}
+
+function catchInsect(){
+    increaseScore()
+    this.classList.add('caught')
+
+}
+
+function increaseScore() {
+    score = score + 1
+    sccoreEl.HTML = `Score: ${score}`
 }
