@@ -22,7 +22,7 @@ body {
     background-repeat: no-repeat;
     width: 200px;
     height: 100px;
-
+    object-fit: cover;
 }
 
 .count{
@@ -43,4 +43,5 @@ body {
     padding: 40px;
     display: flex;
     background-repeat: no-repeat;
+    object-fit: contain;
 }
