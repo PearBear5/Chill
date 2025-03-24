@@ -22,7 +22,7 @@ choose_insects.forEach(btn => {
         const alt = img.getAttribute('alt')
         selected_insect = {src, alt}
         startGame()
-        createInsect()
+        setTimeout(createInsect, 1000)
     })
 })
 
