@@ -52,6 +52,8 @@ function createInsect() {
     insect.style.top = `${y}px`
     insect.style.left = `${x}px`
 
+    insect.addEventListener('click', catchInsect)
+
     game_container.appendChild(insect)
 }
 
