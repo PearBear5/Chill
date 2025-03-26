@@ -27,3 +27,11 @@ body {
     background: white;
     top: 80px;
 }
+
+.bar {
+    position: absolute;
+    height: 100vh;
+    background-color: white;
+    width: 10px;
+    left: 0px;
+}
