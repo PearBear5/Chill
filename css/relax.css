@@ -71,6 +71,7 @@ body {
     height: 190px;
     background-color: red;
     animation: rotate 7.5s linear infinite;
+    transform-origin: bottom center;
 }
 
 @keyframes rotate {
