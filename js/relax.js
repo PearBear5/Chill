@@ -4,5 +4,6 @@ const text = document.getElementById('text')
 function breathAnimation() {
     text.innerHTML = 'Breath In'
     container.classlist.add(grow)
-    
+
+    setTimeout(, 3000)
 }
