@@ -44,5 +44,12 @@ margin: auto;
         #ffffff 60%,
         #336d62 60%,
         #2a5b52 100%
-    )
+    );
+    height: 320px;
+    width: 320px;
+    z-index: 2;
+    border-radius: 50%;
+    position: absolute;
+    top: 0;
+    left: 0;
 }
