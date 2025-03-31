@@ -16,9 +16,9 @@ body {
 }
 
 .container {
-
-
-
+justify: content;
+position: relative;
+margin: auto;
 
 
 
@@ -33,4 +33,16 @@ body {
     top: 0;
     left: 0;
     z-index: -1;
+    border-radius: 50%;
+}
+
+.gradient-circle {
+    background: conic-gradient(
+        #55b7a4 0%,
+        #4ca494 30%,
+        #ffffff 40%,
+        #ffffff 60%,
+        #336d62 60%,
+        #2a5b52 100%
+    )
 }
