@@ -24,5 +24,22 @@ body {
     z-index: -1;
     border-style: dashed;
     border-color: palegreen;
-
 }
+
+.patternup {
+    position: absolute;
+    width: 0;
+    height: 0;
+    border-left: 50px solid transparent;
+    border-right: 50px solid transparent;
+    border-bottom: 100px solid black;
+  }
+
+#1 {
+    left: 50vw;
+    top: 180px;
+}
+
+  .patterndown {
+
+  }
