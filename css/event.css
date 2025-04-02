@@ -2,7 +2,7 @@
     box-sizing: border-box
 }
 
-body{
+body {
     display: flex;
     height: 100vh;
     justify-content: center;
