@@ -9,7 +9,7 @@ body {
 .turtle {
     height: 300px;
     width: 250px;
-    background-color: green;
+    background-color: olivedrab;
     position: absolute;
     border-radius: 50%;
 }
@@ -33,7 +33,7 @@ body {
     border-left: 50px solid transparent;
     border-right: 50px solid transparent;
     border-bottom: 100px solid black;
-    border-bottom-color: darkgreen;
+    border-bottom-color: darkkhaki;
 }
 
 #el1 {
@@ -57,7 +57,7 @@ body {
     border-left: 50px solid transparent;
     border-right: 50px solid transparent;
     border-top: 100px solid black;
-    border-top-color: lightgreen;
+    border-top-color: khaki;
 }
 
 #el4 {
@@ -92,6 +92,28 @@ body {
 #arm2 {
     rotate: 335deg;
     top: 150px;
+    left: 560px;
+    z-index: -1;
+}
+
+.leg {
+    position: absolute;
+    width: 60px;
+    height: 100px;
+    border-radius: 50%;
+    background-color: lime;
+}
+
+#leg1 {
+    rotate: 335deg;
+    bottom: 150px;
+    right: 560px;
+    z-index: -1
+}
+
+#leg2 {
+    rotate: 25deg;
+    bottom: 150px;
     left: 560px;
     z-index: -1;
 }
