@@ -33,13 +33,43 @@ body {
     border-left: 50px solid transparent;
     border-right: 50px solid transparent;
     border-bottom: 100px solid black;
-  }
+    border-bottom-color: darkgreen;
+}
 
 #el1 {
     left: 50vw;
     top: 180px;
 }
 
-  .patterndown {
+#el2 {
+    left: 43vw;
+    top: 180px;
+}
 
-  }
+#el3 {
+    top: 280px;
+}
+
+.patterndown {
+    position: absolute;
+    width: 0;
+    height: 0;
+    border-left: 50px solid transparent;
+    border-right: 50px solid transparent;
+    border-top: 100px solid black;
+    border-top-color: lightgreen;
+}
+
+#el4 {
+    top: 180px;
+}
+
+#el5 {
+    top: 280px;
+    left: 43vw;
+}
+
+#el6 {
+    top: 280px;
+    left: 50vw;
+}
