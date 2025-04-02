@@ -38,16 +38,16 @@ body {
 
 #el1 {
     left: 50vw;
-    top: 180px;
+    top: 200px;
 }
 
 #el2 {
     left: 43vw;
-    top: 180px;
+    top: 200px;
 }
 
 #el3 {
-    top: 280px;
+    top: 300px;
 }
 
 .patterndown {
@@ -61,16 +61,16 @@ body {
 }
 
 #el4 {
-    top: 180px;
+    top: 200px;
 }
 
 #el5 {
-    top: 280px;
+    top: 300px;
     left: 43vw;
 }
 
 #el6 {
-    top: 280px;
+    top: 300px;
     left: 50vw;
 }
 
