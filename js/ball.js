@@ -47,6 +47,7 @@ function moveBall() {
     if (ballYPosition > windowHeight - 2 * ballRadius || ballYPosition < 0) {
         ballYDirection = ballYDirection * -1
     }
+    if (ballXPosition )
 }
 
 function createlpadel() {
@@ -68,7 +69,7 @@ document.addEventListener('keyup', (event) => {
         )
     }
     if (event.key == 's') {
-        if (lpadelYposition >= windowHeight - padelHeight)
+        if (lpadelYposition >= windowHeight - lpadelHeight)
         {
             lpadelYposition = windowHeight - lpadelHeight
         }
