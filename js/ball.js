@@ -49,7 +49,7 @@ function moveBall() {
     }
     if (ballYPosition - ballRadius <= lpadelYposition && ballYposition + ballRadius >= lpadelYposition + lpadelHeight)
     {
-        if (ballXposition)
+        if (ballXposition - ballRadius <= )
     }
 }
 
