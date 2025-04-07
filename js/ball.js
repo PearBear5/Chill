@@ -17,6 +17,7 @@ let ballYPosition = windowHeight / 2 - ballRadius
 let ballYDirection = 1
 
 createBall()
+createlpadel()
 
 function createBall(){
     ball.style.height = `${2 * ballRadius}px`
@@ -47,10 +48,10 @@ function moveBall(){
     }
 }
 
-create lpadel() {
+createlpadel() {
     lpadel.style.height = `${lpadelHeight}px`
     lpadel.style.width = `${lpadelWidth}px`
     lpadel.style.backgroundColor = 'red'
     lpadel.style.position = 'absolute'
-    lpadel.style.left = ''
+    lpadel.style.left = '0px'
 }
