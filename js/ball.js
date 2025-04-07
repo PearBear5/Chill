@@ -7,7 +7,7 @@ const windowHeight = window.innerHeight
 const windowWidth = window.innerWidth
 
 let lpadelWidth = 20
-let lpadelHeight = 200
+let lpadelHeight = 250
 let lpadelYposition = windowHeight / 2 - lpadelHeight / 2
 let lpadelSpeed = 30
 let lpadelXposition = 30
