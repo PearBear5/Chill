@@ -5,6 +5,7 @@ document.body.appendChild(lpadel)
 
 let lpadelWidth = 20
 let lpadelHeight = 150
+let lpadelYposition = windowHeight / 2 - lpadelHeight
 
 const ballRadius = 30
 const windowHeight = window.innerHeight
@@ -54,7 +55,16 @@ function createlpadel() {
     lpadel.style.backgroundColor = 'red'
     lpadel.style.position = 'absolute'
     lpadel.style.left = '30px'
-    lpadel.style.top = `${windowHeight / 2 - lpadelHeight / 2}px`
+    lpadel.style.top = `${lpadelYposition}px`
 }
 
-lpadel.addEventlistener('')
+document.addEventlistener('keyup', (event)=> {
+    if (event.key == 'w')
+    {
+        //move up
+    }
+    if (event.key == 's')
+    {
+        //move down
+    }
+})
