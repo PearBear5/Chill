@@ -68,9 +68,9 @@ document.addEventListener('keyup', (event) => {
         )
     }
     if (event.key == 's') {
-        if (lpadelYpostion >= windowHeight - padelHeight)
+        if (lpadelYposition >= windowHeight - padelHeight)
         {
-            lpadelYposition = windowHeight - padelHeight
+            lpadelYposition = windowHeight - lpadelHeight
         }
         else {
             lpadelYposition = lpadelYposition + lpadelSpeed
