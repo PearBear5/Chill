@@ -48,10 +48,11 @@ function moveBall(){
     }
 }
 
-createlpadel() {
+function createlpadel() {
     lpadel.style.height = `${lpadelHeight}px`
     lpadel.style.width = `${lpadelWidth}px`
     lpadel.style.backgroundColor = 'red'
     lpadel.style.position = 'absolute'
     lpadel.style.left = '0px'
+    lpadel.style.top = `${windowHeight / 2 - lpadelHeight / 2}px`
 }
