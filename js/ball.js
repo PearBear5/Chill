@@ -46,3 +46,11 @@ function moveBall(){
         ballYDirection = ballYDirection * -1
     }
 }
+
+create lpadel() {
+    lpadel.style.height = `${lpadelHeight}px`
+    lpadel.style.width = `${lpadelWidth}px`
+    lpadel.style.backgroundColor = 'red'
+    lpadel.style.position = 'absolute'
+    lpadel.style.left = ''
+}
