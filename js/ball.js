@@ -10,6 +10,7 @@ let lpadelWidth = 20
 let lpadelHeight = 200
 let lpadelYposition = windowHeight / 2 - lpadelHeight / 2
 let lpadelSpeed = 30
+let lpadelXposition = 30
 
 const ballRadius = 30
 
@@ -49,7 +50,10 @@ function moveBall() {
     }
     if (ballYPosition - ballRadius <= lpadelYposition && ballYposition + ballRadius >= lpadelYposition + lpadelHeight)
     {
-        if (ballXposition - ballRadius <= )
+        if (ballXposition - ballRadius <= lpadelXposition)
+        {
+            ballXDirection = ballXdirection * -1
+        }
     }
 }
 
@@ -58,7 +62,7 @@ function createlpadel() {
     lpadel.style.width = `${lpadelWidth}px`
     lpadel.style.backgroundColor = 'red'
     lpadel.style.position = 'absolute'
-    lpadel.style.left = '30px'
+    lpadel.style.left = `${lpadelXposition}px`
     lpadel.style.top = `${lpadelYposition}px`
 }
 
