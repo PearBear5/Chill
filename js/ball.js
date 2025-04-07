@@ -48,11 +48,11 @@ function moveBall() {
     if (ballYPosition > windowHeight - 2 * ballRadius || ballYPosition < 0) {
         ballYDirection = ballYDirection * -1
     }
-    if (ballYPosition - ballRadius <= lpadelYposition && ballYposition + ballRadius >= lpadelYposition + lpadelHeight)
+    if (ballYPosition - ballRadius <= lpadelYposition && ballYPosition + ballRadius >= lpadelYposition + lpadelHeight)
     {
-        if (ballXposition - ballRadius <= lpadelXposition)
+        if (ballXPosition - ballRadius <= lpadelXposition)
         {
-            ballXDirection = ballXdirection * -1
+            ballXDirection = ballXDirection * -1
         }
     }
 }
