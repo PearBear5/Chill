@@ -3,13 +3,15 @@ document.body.appendChild(ball)
 const lpadel = document.createElement('div')
 document.body.appendChild(lpadel)
 
-let lpadelWidth = 20
-let lpadelHeight = 150
-let lpadelYposition = windowHeight / 2 - lpadelHeight
-
-const ballRadius = 30
 const windowHeight = window.innerHeight
 const windowWidth = window.innerWidth
+
+let lpadelWidth = 20
+let lpadelHeight = 150
+let lpadelYposition = windowHeight / 2 - lpadelHeight / 2
+let lpadelSpeed = 5
+
+const ballRadius = 30
 
 let ballXPosition = windowWidth / 2 - ballRadius
 let ballSpeed = 5
@@ -20,7 +22,7 @@ let ballYDirection = 1
 createBall()
 createlpadel()
 
-function createBall(){
+function createBall() {
     ball.style.height = `${2 * ballRadius}px`
     ball.style.width = `${2 * ballRadius}px`
     ball.style.borderRadius = "50%"
@@ -34,17 +36,15 @@ function createBall(){
 
 setInterval(moveBall, 10)
 
-function moveBall(){
+function moveBall() {
     ballXPosition = ballXPosition + ballSpeed * ballXDirection
     ball.style.left = `${ballXPosition}px`
-    if (ballXPosition > windowWidth - 2*ballRadius || ballXPosition < 0)
-    {
+    if (ballXPosition > windowWidth - 2 * ballRadius || ballXPosition < 0) {
         ballXDirection = ballXDirection * -1
     }
     ballYPosition = ballYPosition + ballSpeed * ballYDirection
     ball.style.top = `${ballYPosition}px`
-    if (ballYPosition > windowHeight - 2*ballRadius || ballYPosition < 0)
-    {
+    if (ballYPosition > windowHeight - 2 * ballRadius || ballYPosition < 0) {
         ballYDirection = ballYDirection * -1
     }
 }
@@ -58,13 +58,12 @@ function createlpadel() {
     lpadel.style.top = `${lpadelYposition}px`
 }
 
-document.addEventlistener('keyup', (event)=> {
-    if (event.key == 'w')
-    {
-        //move up
+document.addEventlistener('keyup', (event) => {
+    if (event.key == 'w') {
+        lpadelYposition = lpadelYposition - lpadelSpeed
     }
-    if (event.key == 's')
-    {
-        //move down
+    if (event.key == 's') {
+        lpadelYposition = lpadelYposition + lpadelSpeed
     }
+    lpadel.style.top = `${lpadelYposition}px`
 })
