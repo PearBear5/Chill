@@ -1,7 +1,15 @@
 const ball = document.createElement('div')
+document.body.appendChild(ball)
+const lpadel = document.createElement('div')
+document.body.appendChild(lpadel)
+
+let lpadelWidth = 20
+let lpadelHeight = 100
+
 const ballRadius = 50
 const windowHeight = window.innerHeight
 const windowWidth = window.innerWidth
+
 let ballXPosition = windowWidth / 2 - ballRadius
 let ballSpeed = 5
 let ballXDirection = 1
@@ -11,7 +19,6 @@ let ballYDirection = 1
 createBall()
 
 function createBall(){
-    document.body.appendChild(ball)
     ball.style.height = `${2 * ballRadius}px`
     ball.style.width = `${2 * ballRadius}px`
     ball.style.borderRadius = "50%"
