@@ -4,9 +4,9 @@ const lpadel = document.createElement('div')
 document.body.appendChild(lpadel)
 
 let lpadelWidth = 20
-let lpadelHeight = 100
+let lpadelHeight = 150
 
-const ballRadius = 50
+const ballRadius = 30
 const windowHeight = window.innerHeight
 const windowWidth = window.innerWidth
 
@@ -53,6 +53,8 @@ function createlpadel() {
     lpadel.style.width = `${lpadelWidth}px`
     lpadel.style.backgroundColor = 'red'
     lpadel.style.position = 'absolute'
-    lpadel.style.left = '0px'
+    lpadel.style.left = '30px'
     lpadel.style.top = `${windowHeight / 2 - lpadelHeight / 2}px`
 }
+
+lpadel.addEventlistener('')
