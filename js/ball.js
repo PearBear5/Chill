@@ -58,7 +58,7 @@ function createlpadel() {
     lpadel.style.top = `${lpadelYposition}px`
 }
 
-document.addEventlistener('keyup', (event) => {
+document.addEventListener('keyup', (event) => {
     if (event.key == 'w') {
         lpadelYposition = lpadelYposition - lpadelSpeed
     }
