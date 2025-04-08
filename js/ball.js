@@ -11,7 +11,7 @@ const windowWidth = window.innerWidth
 
 let score = 0 //display score and increase score by 1 every time the ball hits the paddle
 let level = 1
-let mult = 1
+let mult = 0
 // display level and increase level by 1 everytime score increases by 10
 //increase ball speed or decrease paddle height
 //end game when miss ball
