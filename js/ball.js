@@ -78,6 +78,7 @@ function moveBall() {
         (ballXDirection == -1)
     ) {
         ballXDirection = ballXDirection * -1
+        updateTracker(1)
     }
 }
 
@@ -124,11 +125,22 @@ function movelpaddle() {
 }
 
 function createTracker() {
+    tracker.style.position = 'absolute'
     tracker.style.height = '100px'
     tracker.style.width = '200px'
+    tracker.style.backgroundColor = ''
     tracker.style.top = '0px'
     tracker.style.right = '0px'
-    tracker.innerHTML = `Score: ${score} <break> Level: ${level}`
+    tracker.style.fontSize = '24px'
+    tracker.innerHTML = `Score: ${score} <br> Level: ${level}`
+}
+
+function updateTracker(value) {
+    if (value == 1) {
+        score = score + 1
+    }
+    if (score >)
+    tracker.innerHTML = `Score: ${score} <br> Level: ${level}`
 }
 
 function animate() {
