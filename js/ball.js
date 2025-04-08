@@ -2,6 +2,8 @@ const ball = document.createElement('div')
 document.body.appendChild(ball)
 const lpaddle = document.createElement('div')
 document.body.appendChild(lpaddle)
+const tracker = document.createElement('div')
+document.body.appendChild(tracker)
 
 const windowHeight = window.innerHeight
 const windowWidth = window.innerWidth
@@ -27,6 +29,7 @@ let ballXDirection = 1
 let ballYPosition = windowHeight / 2 - ballRadius
 let ballYDirection = 1
 
+createTracker()
 createBall()
 createlpaddle()
 
@@ -43,13 +46,7 @@ function createBall() {
 }
 
 
-// Bounce varibles
-let ballTop = ballYPosition
-let ballBottom = ballYPosition + 2 * ballRadius
-let ballLeft = ballXPosition
-let lpaddleTop = lpaddleYposition
-let lpaddleBottom = lpaddleYposition + lpaddleHeight
-let lpaddleRight = lpaddleXposition + lpaddleWidth
+
 
 
 function moveBall() {
@@ -63,13 +60,23 @@ function moveBall() {
     if (ballYPosition > windowHeight - 2 * ballRadius || ballYPosition < 0) {
         ballYDirection = ballYDirection * -1
     }
+
+
+    // Bounce varibles
+    let ballTop = ballYPosition
+    let ballBottom = ballYPosition + 2 * ballRadius
+    let ballLeft = ballXPosition
+    let lpaddleTop = lpaddleYposition
+    let lpaddleBottom = lpaddleYposition + lpaddleHeight
+    let lpaddleRight = lpaddleXposition + lpaddleWidth
+
+
     if (
         (ballBottom >= lpaddleTop) &&
         (ballTop <= lpaddleBottom) &&
         (ballLeft <= lpaddleRight) &&
         (ballXDirection == -1)
-    )
-    {
+    ) {
         ballXDirection = ballXDirection * -1
     }
 }
@@ -114,6 +121,14 @@ function movelpaddle() {
         lpaddleYposition = lpaddleYposition + lpaddleSpeed
     }
     lpaddle.style.top = `${lpaddleYposition}px`
+}
+
+function createTracker() {
+    tracker.style.height = '100px'
+    tracker.style.width = '200px'
+    tracker.style.top = '0px'
+    tracker.style.right = '0px'
+    tracker.innerHTML = `Score: ${score} <break> Level: ${level}`
 }
 
 function animate() {
