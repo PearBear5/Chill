@@ -16,7 +16,7 @@ let level = 1 // display level and increase level by 1 everytime score increases
 let lpaddleWidth = 10
 let lpaddleHeight = 200
 let lpaddleYposition = windowHeight / 2 - lpaddleHeight / 2
-let lpaddleSpeed = 20
+let lpaddleSpeed = 10
 let lpaddleXposition = 30
 
 // Ball
