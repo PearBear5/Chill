@@ -144,8 +144,10 @@ function updateTracker(value) {
     }
     preLevel = level
     level = Math.floor(score / 10)
-    if (preLevel =! level)
+    if (preLevel == level)
     {
+    }
+    else {
         mult = mult + 1
     }
     preLevel = level
