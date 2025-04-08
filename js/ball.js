@@ -10,13 +10,15 @@ const windowWidth = window.innerWidth
 
 
 let score = 0 //display score and increase score by 1 every time the ball hits the paddle
-let level = 1 // display level and increase level by 1 everytime score increases by 10
+let level = 1
+let mult = 1
+// display level and increase level by 1 everytime score increases by 10
 //increase ball speed or decrease paddle height
 //end game when miss ball
 
 // Paddle
 let lpaddleWidth = 10
-let lpaddleHeight = 200
+let lpaddleHeight = 250
 let lpaddleYposition = windowHeight / 2 - lpaddleHeight / 2
 let lpaddleSpeed = 10
 let lpaddleXposition = 30
@@ -24,7 +26,7 @@ let lpaddleXposition = 30
 // Ball
 const ballRadius = 15
 let ballXPosition = windowWidth / 2 - ballRadius
-let ballSpeed = 5
+let ballSpeed = 15
 let ballXDirection = 1
 let ballYPosition = windowHeight / 2 - ballRadius
 let ballYDirection = 1
@@ -135,12 +137,19 @@ function createTracker() {
     tracker.innerHTML = `Score: ${score} <br> Level: ${level}`
 }
 
+let preLevel = 0
 function updateTracker(value) {
     if (value == 1) {
         score = score + 1
     }
-    if (score >)
-    tracker.innerHTML = `Score: ${score} <br> Level: ${level}`
+    preLevel = level
+    level = Math.floor(score / 10)
+    if (preLevel =! level)
+    {
+        mult = mult + 1
+    }
+    preLevel = level
+    tracker.innerHTML = `Score: ${score} <br> Level: ${level} ${mult}`
 }
 
 function animate() {
