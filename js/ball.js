@@ -137,20 +137,17 @@ function createTracker() {
     tracker.innerHTML = `Score: ${score} <br> Level: ${level}`
 }
 
-let preLevel = 0
+
 function updateTracker(value) {
     if (value == 1) {
         score = score + 1
     }
-    preLevel = level
-    level = Math.floor(score / 10)
-    if (preLevel == level)
+    if (level = Math.floor(score / 10) != level)
     {
-    }
-    else {
         mult = mult + 1
     }
-    preLevel = level
+    level = Math.floor(score / 10)
+
     tracker.innerHTML = `Score: ${score} <br> Level: ${level} ${mult}`
 }
 
