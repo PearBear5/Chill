@@ -7,7 +7,7 @@ const windowHeight = window.innerHeight
 const windowWidth = window.innerWidth
 
 let lpadelWidth = 20
-let lpadelHeight = 250
+let lpadelHeight = 200
 let lpadelYposition = windowHeight / 2 - lpadelHeight / 2
 let lpadelSpeed = 30
 let lpadelXposition = 30
@@ -15,7 +15,7 @@ let lpadelXposition = 30
 const ballRadius = 15
 
 let ballXPosition = windowWidth / 2 - ballRadius
-let ballSpeed = 4
+let ballSpeed = 5
 let ballXDirection = 1
 let ballYPosition = windowHeight / 2 - ballRadius
 let ballYDirection = 1
@@ -48,7 +48,7 @@ function moveBall() {
     if (ballYPosition > windowHeight - 2 * ballRadius || ballYPosition < 0) {
         ballYDirection = ballYDirection * -1
     }
-    if (ballYPosition - ballRadius <= lpadelYposition && ballYPosition + ballRadius >= lpadelYposition + lpadelHeight)
+    if (ballYPosition - ballRadius >= lpadelYposition && ballYPosition + ballRadius <= lpadelYposition + lpadelHeight)
     {
         if (ballXPosition - ballRadius <= lpadelXposition)
         {
