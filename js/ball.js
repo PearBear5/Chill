@@ -57,6 +57,13 @@ function moveBall() {
     }
 }
 
+let ballTop = ballYPosition
+let ballBottom = ballYPosition + 2 * ballRadius
+let ballLeft = ballXPosition
+let lpadelTop = lpadelYposition
+let lpadelBottom = lpadelYposition + lpadelHeight
+let lpadelRight = lpadelXposition + lpadelWidth
+
 function createlpadel() {
     lpadel.style.height = `${lpadelHeight}px`
     lpadel.style.width = `${lpadelWidth}px`
