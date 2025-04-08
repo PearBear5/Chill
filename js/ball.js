@@ -6,14 +6,15 @@ document.body.appendChild(lpaddle)
 const windowHeight = window.innerHeight
 const windowWidth = window.innerWidth
 
+// Paddle
 let lpaddleWidth = 10
 let lpaddleHeight = 200
 let lpaddleYposition = windowHeight / 2 - lpaddleHeight / 2
-let lpaddleSpeed = 30
+let lpaddleSpeed = 20
 let lpaddleXposition = 30
 
+// Ball
 const ballRadius = 15
-
 let ballXPosition = windowWidth / 2 - ballRadius
 let ballSpeed = 5
 let ballXDirection = 1
@@ -97,5 +98,11 @@ document.addEventListener('keyup', (event) => {
 })
 
 function movelpaddle() {
-    if ()
+    if (wKey == true && lpaddleYposition > 0) {
+        lpaddleYposition = lpaddleYposition - lpaddleSpeed
+    }
+    if (sKey == true && lpaddleYposition < windowHeight - lpaddleHeight) {
+        lpaddleYposition = lpaddleYposition + lpaddleSpeed
+    }
+    lpaddle.style.top = `${lpaddleYposition}px`
 }
