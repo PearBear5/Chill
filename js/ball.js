@@ -36,7 +36,15 @@ function createBall() {
     ball.style.borderColor = "darkred"
 }
 
-setInterval(moveBall, 10)
+
+// Bounce varibles
+let ballTop = ballYPosition
+let ballBottom = ballYPosition + 2 * ballRadius
+let ballLeft = ballXPosition
+let lpaddleTop = lpaddleYposition
+let lpaddleBottom = lpaddleYposition + lpaddleHeight
+let lpaddleRight = lpaddleXposition + lpaddleWidth
+
 
 function moveBall() {
     ballXPosition = ballXPosition + ballSpeed * ballXDirection
@@ -60,12 +68,7 @@ function moveBall() {
     }
 }
 
-let ballTop = ballYPosition
-let ballBottom = ballYPosition + 2 * ballRadius
-let ballLeft = ballXPosition
-let lpaddleTop = lpaddleYposition
-let lpaddleBottom = lpaddleYposition + lpaddleHeight
-let lpaddleRight = lpaddleXposition + lpaddleWidth
+
 
 function createlpaddle() {
     lpaddle.style.height = `${lpaddleHeight}px`
@@ -106,3 +109,11 @@ function movelpaddle() {
     }
     lpaddle.style.top = `${lpaddleYposition}px`
 }
+
+function animate() {
+    moveBall()
+    movelpaddle()
+    requestAnimationFrame(animate)
+}
+
+animate()
