@@ -1,16 +1,16 @@
 const ball = document.createElement('div')
 document.body.appendChild(ball)
-const lpadel = document.createElement('div')
-document.body.appendChild(lpadel)
+const lpaddle = document.createElement('div')
+document.body.appendChild(lpaddle)
 
 const windowHeight = window.innerHeight
 const windowWidth = window.innerWidth
 
-let lpadelWidth = 10
-let lpadelHeight = 200
-let lpadelYposition = windowHeight / 2 - lpadelHeight / 2
-let lpadelSpeed = 30
-let lpadelXposition = 30
+let lpaddleWidth = 10
+let lpaddleHeight = 200
+let lpaddleYposition = windowHeight / 2 - lpaddleHeight / 2
+let lpaddleSpeed = 30
+let lpaddleXposition = 30
 
 const ballRadius = 15
 
@@ -21,7 +21,7 @@ let ballYPosition = windowHeight / 2 - ballRadius
 let ballYDirection = 1
 
 createBall()
-createlpadel()
+createlpaddle()
 
 function createBall() {
     ball.style.height = `${2 * ballRadius}px`
@@ -48,48 +48,54 @@ function moveBall() {
     if (ballYPosition > windowHeight - 2 * ballRadius || ballYPosition < 0) {
         ballYDirection = ballYDirection * -1
     }
-    if (ballYPosition - ballRadius >= lpadelYposition && ballYPosition + ballRadius <= lpadelYposition + lpadelHeight)
+    if (
+        (ballBottom >= lpaddleTop) &&
+        (ballTop <= lpaddleBottom) &&
+        (ballLeft <= lpaddleRight) &&
+        (ballXDirection == -1)
+    )
     {
-        if (ballXPosition - ballRadius <= lpadelXposition)
-        {
-            ballXDirection = ballXDirection * -1
-        }
+        ballXDirection = ballXDirection * -1
     }
 }
 
 let ballTop = ballYPosition
 let ballBottom = ballYPosition + 2 * ballRadius
 let ballLeft = ballXPosition
-let lpadelTop = lpadelYposition
-let lpadelBottom = lpadelYposition + lpadelHeight
-let lpadelRight = lpadelXposition + lpadelWidth
+let lpaddleTop = lpaddleYposition
+let lpaddleBottom = lpaddleYposition + lpaddleHeight
+let lpaddleRight = lpaddleXposition + lpaddleWidth
 
-function createlpadel() {
-    lpadel.style.height = `${lpadelHeight}px`
-    lpadel.style.width = `${lpadelWidth}px`
-    lpadel.style.backgroundColor = 'red'
-    lpadel.style.position = 'absolute'
-    lpadel.style.left = `${lpadelXposition}px`
-    lpadel.style.top = `${lpadelYposition}px`
+function createlpaddle() {
+    lpaddle.style.height = `${lpaddleHeight}px`
+    lpaddle.style.width = `${lpaddleWidth}px`
+    lpaddle.style.backgroundColor = 'red'
+    lpaddle.style.position = 'absolute'
+    lpaddle.style.left = `${lpaddleXposition}px`
+    lpaddle.style.top = `${lpaddleYposition}px`
 }
+
+wKey = false
+sKey = false
 
 document.addEventListener('keyup', (event) => {
     if (event.key == 'w') {
-        if (lpadelYposition <= 0){
-            lpadleYposition = 0
-        }
-        else (
-            lpadelYposition = lpadelYposition - lpadelSpeed
-        )
+        wKey = true
     }
     if (event.key == 's') {
-        if (lpadelYposition >= windowHeight - lpadelHeight)
-        {
-            lpadelYposition = windowHeight - lpadelHeight
-        }
-        else {
-            lpadelYposition = lpadelYposition + lpadelSpeed
-        }
+        sKey = true
     }
-    lpadel.style.top = `${lpadelYposition}px`
 })
+
+document.addEventListener('keyup', (event) => {
+    if (event.key = 'w') {
+        wKey = false
+    }
+    if (event.key == 's') {
+        sKey = false
+    }
+})
+
+function movelpaddle() {
+    if ()
+}
