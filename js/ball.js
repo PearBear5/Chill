@@ -37,7 +37,7 @@ let ballYDirection = 1
 createTracker()
 createBall()
 createlpaddle()
-//createMenu()
+createMenu()
 
 function createBall() {
     ball.style.height = `${2 * ballRadius}px`
@@ -153,7 +153,7 @@ function createMenu() {
     menu.style.backgroundColor = 'green'
     menu.style.fontSize = '30px'
     menu.style.top = `${windowHeight / 2 - 100 / 2}px`
-    menu.style.left = `${windowWidth / 2 - 150 / 2}`
+    menu.style.left = `${windowWidth / 2 + 150 / 2}`
 }
 
 function endGame()
