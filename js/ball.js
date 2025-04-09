@@ -172,7 +172,8 @@ function createMenu() {
 
 function endGame()
 {
-
+    ballXDirection = 0
+    ballYDirection = 0
 }
 
 function updateTracker(value) {
