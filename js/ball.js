@@ -169,7 +169,8 @@ function createMenu() {
     menuBack.style.left = '0px'
     menuBack.style.top = '0px'
     menu.style.zIndex = '2'
-    menuBack.style.zIndex = '10'
+    menuBack.style.zIndex = '0'
+    menu.style.hover = 'pointer'
 }
 
 function endGame()
