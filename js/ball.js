@@ -66,6 +66,10 @@ function moveBall() {
     if (ballYPosition > windowHeight - 2 * ballRadius || ballYPosition < 0) {
         ballYDirection = ballYDirection * -1
     }
+    if (ballXPosition <= 0)
+    {
+        endGame()
+    }
 
 
     // Bounce varibles
@@ -148,7 +152,13 @@ function createMenu() {
     menu.innerHTML = 'Start Game'
     menu.style.backgroundColor = 'green'
     menu.style.fontSize = '30px'
-    menu.style.text = 'center'
+    menu.style.top = `${windowHeight / 2 - 100 / 2}px`
+    menu.style.left = `${windowWidth / 2 - 150 / 2}`
+}
+
+function endGame()
+{
+
 }
 
 function updateTracker(value) {
