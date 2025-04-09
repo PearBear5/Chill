@@ -42,7 +42,7 @@ let menuVis = true
 createTracker()
 createBall()
 createlpaddle()
-//createMenu()
+createMenu()
 
 function createBall() {
     ball.style.height = `${2 * ballRadius}px`
