@@ -151,7 +151,8 @@ function createTracker() {
 }
 
 function createMenu() {
-
+    menuBack.style.margin = '0'
+    
     menu.style.position = 'absolute'
     menu.style.height = '40px'
     menu.style.width = '150px'
