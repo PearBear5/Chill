@@ -152,7 +152,7 @@ function createTracker() {
 
 function createMenu() {
     menuBack.style.margin = '0'
-    
+    menuBack.style.position = 'absolute'
     menu.style.position = 'absolute'
     menu.style.height = '40px'
     menu.style.width = '150px'
@@ -162,13 +162,14 @@ function createMenu() {
     menu.style.top = `${windowHeight / 2 - 40 / 2}px`
     menu.style.left = `${windowWidth / 2 - 150 / 2}px`
     menuBack.style.height = `100vh`
-    menuBack.style.wdith = `100vw`
+    menuBack.style.width = `100vw`
     menuBack.style.boxSizing = 'borderBox'
     menuBack.style.backgroundColor = 'black'
     menuBack.style.opacity = '0.1'
     menuBack.style.left = '0px'
     menuBack.style.top = '0px'
     menu.style.zIndex = '2'
+    menuBack.style.zIndex = '10'
 }
 
 function endGame()
