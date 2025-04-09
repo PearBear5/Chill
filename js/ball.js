@@ -26,7 +26,7 @@ let lpaddleXposition = 30
 // Ball
 const ballRadius = 15
 let ballXPosition = windowWidth / 2 - ballRadius
-let ballSpeed = 15
+let ballSpeed = 5
 let ballXDirection = 1
 let ballYPosition = windowHeight / 2 - ballRadius
 let ballYDirection = 1
@@ -144,7 +144,9 @@ function updateTracker(value) {
     }
     if (level = Math.floor(score / 10) + 1 != level)
     {
-        mult = mult + 1
+        // dificulty increase
+        ballSpeed = ballSpeed + 5
+        lpaddleHeight = lpaddleHeight - 10
     }
     level = Math.floor(score / 10) + 1
 
