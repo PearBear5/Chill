@@ -31,9 +31,9 @@ let lpaddleXposition = 30
 const ballRadius = 15
 let ballXPosition = windowWidth / 2 - ballRadius
 let ballSpeed = 5
-let ballXDirection = 1
+let ballXDirection = 0
 let ballYPosition = windowHeight / 2 - ballRadius
-let ballYDirection = 1
+let ballYDirection = 0
 
 // Menu Varibles
 let menuVis = true
@@ -70,6 +70,9 @@ function moveBall() {
     ball.style.top = `${ballYPosition}px`
     if (ballYPosition > windowHeight - 2 * ballRadius || ballYPosition < 0) {
         ballYDirection = ballYDirection * -1
+    }
+    if (menuVis != true) {
+        menu.style.cursor = 'none'
     }
     if (ballXPosition <= 0)
     {
@@ -178,6 +181,17 @@ function endGame()
     ballXDirection = 0
     ballYDirection = 0
 }
+
+menu.addEventListener('click', () => {
+    if (menuVis)
+    {
+        menu.style.opacity = 0
+        menuBack.style.opacity = 0
+        ballXDirection = 1
+        ballYDirection = 1
+        menuVis = false
+    }
+})
 
 function updateTracker(value) {
     if (value == 1) {
