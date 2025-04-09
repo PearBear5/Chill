@@ -4,6 +4,8 @@ const lpaddle = document.createElement('div')
 document.body.appendChild(lpaddle)
 const tracker = document.createElement('div')
 document.body.appendChild(tracker)
+const menu = document.createElement('btn')
+document.body.appendChild(menu)
 
 const windowHeight = window.innerHeight
 const windowWidth = window.innerWidth
@@ -31,9 +33,11 @@ let ballXDirection = 1
 let ballYPosition = windowHeight / 2 - ballRadius
 let ballYDirection = 1
 
+// functions
 createTracker()
 createBall()
 createlpaddle()
+//createMenu()
 
 function createBall() {
     ball.style.height = `${2 * ballRadius}px`
@@ -137,6 +141,15 @@ function createTracker() {
     tracker.innerHTML = `Score: ${score} <br> Level: ${level}`
 }
 
+function createMenu() {
+    menu.style.position = 'absolute'
+    menu.style.height = '100'
+    menu.style.width = '150px'
+    menu.innerHTML = 'Start Game'
+    menu.style.backgroundColor = 'green'
+    menu.style.fontSize = '30px'
+    menu.style.text = 'center'
+}
 
 function updateTracker(value) {
     if (value == 1) {
@@ -145,7 +158,7 @@ function updateTracker(value) {
     if (level = Math.floor(score / 10) + 1 != level)
     {
         // dificulty increase
-        ballSpeed = ballSpeed + 5
+        ballSpeed = ballSpeed + 3
         lpaddleHeight = lpaddleHeight - 10
     }
     level = Math.floor(score / 10) + 1
