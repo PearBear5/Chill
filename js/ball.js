@@ -4,6 +4,8 @@ const lpaddle = document.createElement('div')
 document.body.appendChild(lpaddle)
 const tracker = document.createElement('div')
 document.body.appendChild(tracker)
+const menuBack = document.createElement('div')
+document.body.addpendChild(menuBack)
 const menu = document.createElement('btn')
 document.body.appendChild(menu)
 
@@ -32,6 +34,9 @@ let ballSpeed = 5
 let ballXDirection = 1
 let ballYPosition = windowHeight / 2 - ballRadius
 let ballYDirection = 1
+
+// Menu Varibles
+let menuVis = true
 
 // functions
 createTracker()
@@ -147,13 +152,20 @@ function createTracker() {
 
 function createMenu() {
     menu.style.position = 'absolute'
-    menu.style.height = '100'
+    menu.style.height = '40px'
     menu.style.width = '150px'
     menu.innerHTML = 'Start Game'
     menu.style.backgroundColor = 'green'
     menu.style.fontSize = '30px'
-    menu.style.top = `${windowHeight / 2 - 100 / 2}px`
-    menu.style.left = `${windowWidth / 2 + 150 / 2}`
+    menu.style.top = `${windowHeight / 2 - 40 / 2}px`
+    menu.style.left = `${windowWidth / 2 - 150 / 2}px`
+    menuBack.style.height = '100vh'
+    menuBack.style.wdith = '100vw'
+    menuBack.style.backgroundColor = 'black'
+    menuBack.style.opacity = '0.1'
+    menuBack.style.left = '0px'
+    menuBack.style.top = '0px'
+    menu.style.zIndex = '2'
 }
 
 function endGame()
