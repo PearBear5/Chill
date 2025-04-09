@@ -142,11 +142,11 @@ function updateTracker(value) {
     if (value == 1) {
         score = score + 1
     }
-    if (level = Math.floor(score / 10) != level)
+    if (level = Math.floor(score / 10) + 1 != level)
     {
         mult = mult + 1
     }
-    level = Math.floor(score / 10)
+    level = Math.floor(score / 10) + 1
 
     tracker.innerHTML = `Score: ${score} <br> Level: ${level} ${mult}`
 }
