@@ -5,7 +5,7 @@ document.body.appendChild(lpaddle)
 const tracker = document.createElement('div')
 document.body.appendChild(tracker)
 const menuBack = document.createElement('div')
-document.body.addpendChild(menuBack)
+document.body.appendChild(menuBack)
 const menu = document.createElement('btn')
 document.body.appendChild(menu)
 
@@ -151,6 +151,7 @@ function createTracker() {
 }
 
 function createMenu() {
+
     menu.style.position = 'absolute'
     menu.style.height = '40px'
     menu.style.width = '150px'
@@ -159,8 +160,9 @@ function createMenu() {
     menu.style.fontSize = '30px'
     menu.style.top = `${windowHeight / 2 - 40 / 2}px`
     menu.style.left = `${windowWidth / 2 - 150 / 2}px`
-    menuBack.style.height = '100vh'
-    menuBack.style.wdith = '100vw'
+    menuBack.style.height = `100vh`
+    menuBack.style.wdith = `100vw`
+    menuBack.style.boxSizing = 'borderBox'
     menuBack.style.backgroundColor = 'black'
     menuBack.style.opacity = '0.1'
     menuBack.style.left = '0px'
@@ -185,7 +187,7 @@ function updateTracker(value) {
     }
     level = Math.floor(score / 10) + 1
 
-    tracker.innerHTML = `Score: ${score} <br> Level: ${level} ${mult}`
+    tracker.innerHTML = `Score: ${score} <br> Level: ${level}`
 }
 
 function animate() {
